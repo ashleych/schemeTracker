@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SPRF</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="sprf.css">
+    <link rel="stylesheet" href="spirals.css">
+    <link rel="stylesheet" href="concCircle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- <script type="text/javascript" src="https://d3js.org/d3.v2.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.2.0/d3.min.js" integrity="sha512-C2RveGuPIWqkaLAluvoxyiaN1XYNe5ss11urhZWZYBUA9Ydgj+hfGKPcxCzTwut1/fmjEZR7Ac35f2aycT8Ogw==" crossorigin="anonymous"></script> -->
+    <!-- <script type="text/javascript" src="https://d3js.org/d3.v2.js"></script> -->
+    <!-- <script src="https://d3js.org/d3.v3.min.js"></script> -->
+    <!-- <script src="https://d3js.org/d3.v6.js"></script> -->
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+    <script src="https://d3js.org/d3-ease.v2.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- <div class="card w-50">
+            <div class="card-img-top d-flex align-items-center bg-light">
+                <div>
+                    <img class="img-fluid" src="http://via.placeholder.com/150x150/1f1a38/ffffff?text=Image" alt="Card image cap">
+                </div>
+                <p class="col p-2 m-0">Text next to the right of the image</p>
+            </div>
+        
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div> -->
+    <!-- <div>
+            <a class="cardSpan" tabindex="0" data-toggle="popover" data-trigger="focus" data-html="true" title="" data-content="
+            <i>'<p>Is the CRM framework applied to banking book exposures?</p>'</i><div style='float:right'><hr>
+                <a href='https://www.bis.org/bcbs/basel3.htm'><cite>Basel CRE22, Para :22.2</cite></a></div>" data-original-title="<img  width='25px' src='/static/images/bis.svg' alt='BISLogo'>      BCBS GUIDANCE ">
+            <p class="cardSpan" style="background-color:none">
+                    Basel CRE22, Para :22.2
+            </p>
+           </a>
+        </div> -->
+
+    <!-- <div id="svg" class='wrapper'></div> -->
+
+
+    <br>
+        <div> Click on the circles to see further details</div>
+
+        <a href="spirals.html">Spirals</a>
+        <a href="circles.html">Circles</a>
+    <div id="concCircle" class="wrapper"> 
+
+
+    </div>
+   
+    <!-- <script type="text/javascript" src="spiral2.js"></script> -->
+    <!-- <script src="spiral2.js"></script> -->
+    <script src="concCircle.js"></script>
+
+    <!-- <div class='tooltip_html_test'>
+
+        <div class='card-img-top align-items-center card-header-custom' style='display:flex'>
+            <img src='images/Scheme20tracker20logos-01.webp' alt='Noimage' width='50' height='50'>
+            <div>
+                <i>
+                    <p><span><strong> scheme </strong></span></p>
+                </i>
+
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+            </div>
+        </div>
+        <br>
+        <p> <strong>Launch : </strong> 2020 </p>
+        <p>objective</p><br></>
+    </div> -->
+
+    <div id='tooltipsGroup'>
+
+        <!-- <a class='cardSpan' tabindex="0"  data-toggle="popover" data-trigger="focus" data-html="true"  title="<img  width='25px' src='' alt='BISLogo'>      BCBS GUIDANCE " 
+                data-content="
+                 <i>'<p>{{question}}</p>'</i><div style='float:right'><hr><a href='https://www.bis.org/bcbs/basel3.htm'><cite>Paragraph</cite></a></div>">
+                 <p class='cardSpan' style="background-color:none">
+                         Paragraph
+                 </p>
+                </a>
+         </a> -->
+
+    </div>
+
+    <div>
+        <!-- styled at .dataTables_wrapper in mystyles.css -->
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-9 col-md-7 col-lg-10 col-xl-10 text-center p-0 mt-3 mb-2">
+                    <div class="card px-0 pt-4 pb-0 mt-3 mb-3" style="display: none;">
+                        <h2 id="heading"> SCHEME TRACKING </h2>
+                        <p>Highlights</p>
+
+
+
+                        <div class="container" style="padding: 2%;display: none;">
+
+                            <button class="my-accordion"> <strong> Ayushman Bharat</strong></button>
+                            <div class="panel">
+
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 3
+                                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                nesciunt laborum
+                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                                cred
+                                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus
+                                labore sustainable.
+                                <br>
+                                <div class="mytable dataTable display">
+
+                                </div>
+                            </div>
+
+
+
+                            <button class="my-accordion"> <strong>Deen Dayal Upadhyaya Grameen Kaushalya
+                                    Yojana</strong></button>
+                            <div class="panel collapse">
+                                <br>
+
+                                none
+                                <div class="mytable dataTable display">
+
+                                </div>
+                            </div>
+
+
+
+                            <button class="my-accordion" color="red"> <strong>PM Kaushal Vikas Yojana ASl</strong>
+                            </button>
+                            <div class="panel" id="collapse1">
+                                <br>
+
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 3
+                                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                nesciunt laborum
+                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                                cred
+                                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus
+                                labore sustainable.
+                                <div class="mytable dataTable display stripe">
+                                    <div>Lorem Ipsum </div>
+                                    <table class=" stripe" id="df_compliant">
+                                    </table>
+                                </div>
+
+                            </div>
+
+                            <button class="my-accordion"> <strong> PM Awas Yojana - Gramin </strong> </button>
+                            <div class="panel collapse">
+                                <br>
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid. 3
+                                wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa
+                                nesciunt laborum
+                                eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin
+                                coffee nulla
+                                assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
+                                cred
+                                nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat
+                                craft beer
+                                farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                accusamus
+                                labore sustainable.
+                            </div>
+
+
+
+                            <button class="my-accordion"> <strong>
+                                    Pradhan Mantri Bhartiya Janaushadhi Pariyojana</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+
+                                </div>
+                            </div>
+
+                            <button class="my-accordion"> <strong> Pradhan Mantri Jan Dhan Yojana</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+
+                                </div>
+                            </div>
+
+
+
+                            <button class="my-accordion"> <strong> Pradhan Mantri Kaushal Vikas Yojana</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+
+                                </div>
+                            </div>
+
+
+                            <button class="my-accordion"> <strong> Pradhan Mantri MUDRA Yojana</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+
+                                </div>
+                            </div>
+
+
+
+
+                            <button class="my-accordion"> <strong> Pradhan Mantri Awaas Yojana -
+                                    Gramin</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+                            <button class="my-accordion"> <strong> Pradhan Mantri Matritva Vandana Yojana
+                                </strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+                            <button class="my-accordion"> <strong> Pradhan Mantri Ujjwala Yojana</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+                            <button class="my-accordion"> <strong> Pradhan Mantri Sahaj Bijli Har Ghar Yojana –
+                                    SAUBHAGYA
+                                </strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+                            <button class="my-accordion"> <strong> Setu Bharatam Yojana</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+                            <button class="my-accordion"> <strong> Stand Up India</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+                            <button class="my-accordion"> <strong> Street Lighting National Programme</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <button class="my-accordion"> <strong> Swachh Bharat Mission – Gramin </strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <button class="my-accordion"> <strong> Swachh Bharat Mission - Urban</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+                            <button class="my-accordion"> <strong> Ujwal DISCOM Assurance Yojana -
+                                    UDAY</strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+                            <button class="my-accordion"> <strong> Unnat Jyoti by Affordable LEDs for All - UJALA
+                                </strong></button>
+                            <div class="panel">
+                                <br>
+                                <div class="mytable dataTable display">
+                                    <table class=" stripe" id="df_not_compliant">
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var acc = document.getElementsByClassName("my-accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
+
+
+</body>
+
+</html>
