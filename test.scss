@@ -1,0 +1,77 @@
+svg {
+  circle {
+    &:first-of-type {
+      fill: DarkGoldenRod;
+    }
+    &:last-of-type {
+      stroke: blue;
+      stroke-width: 2;
+    }
+    &:nth-last-of-type(1) {
+      fill: orange;
+    }
+  }
+  polygon {
+    &:only-of-type {
+      fill: DeepPink;
+    }
+    &:last-of-type {
+      stroke: blue;
+      stroke-width: 2;
+    }
+  }
+  rect {  
+    &:nth-child(2) { 
+      fill:red;
+    }
+    &:nth-of-type(3) {
+      fill: green;
+    }
+    &:nth-last-child(1) {
+      fill: purple;
+    }
+    &:only-child {
+      fill: lime;
+    }
+    &:last-child {
+      stroke: yellowgreen;
+      stroke-width: 3;
+    }
+    &:hover {
+      fill: green;
+    }
+  }
+  g {
+    & > *:empty {
+      &:hover {
+        stroke: purple !important;
+        stroke-width: 3;
+      }
+    }
+    & > *:not(text) {
+      &:hover {
+        fill: pink !important;
+      }
+    }
+  }
+}
+:root {
+  fill: blue;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: Arial;
+  color: #444;
+}
+
+section {
+  width: 450px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin: -200px 0 0 -225px;
+}
+
+body { margin: 0; }

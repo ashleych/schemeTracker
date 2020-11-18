@@ -1,0 +1,400 @@
+.inline {
+    display: inline;
+}
+
+textarea {
+    width: 100%;
+    border: 0in;
+}
+
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background-color: #eee;
+}
+
+.no-outline:focus {
+    outline: none;
+}
+
+
+
+#myBody {
+    margin-top: 1px !important;
+    margin-bottom: 2px !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+}
+
+/* Stylesheet from multipage forms */
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    height: 100%
+}
+
+/* p {
+    color: grey
+} */
+
+#heading {
+    text-transform: uppercase;
+    color: #673AB7;
+    font-weight: normal
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px
+}
+
+
+
+.form-card {
+    text-align: left
+}
+
+
+
+/*#msform input,
+#msform textarea {
+  padding: 8px 15px 8px 15px;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  margin-bottom: 25px;
+  margin-top: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  background-color: #ECEFF1;
+  font-size: 16px;
+  letter-spacing: 1px
+}
+#msform input:focus,
+#msform textarea:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  border: 1px solid #673AB7;
+  outline-width: 0
+}
+*/
+
+.card {
+    z-index: 0;
+    border: none;
+    position: relative
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #673AB7;
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-align: left
+}
+
+.purple-text {
+    color: #673AB7;
+    font-weight: normal
+}
+
+.steps {
+    font-size: 25px;
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: right
+}
+
+.fieldlabels {
+    color: gray;
+    text-align: left
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey
+}
+
+#progressbar .active {
+    color: #673AB7
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 15px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400
+}
+
+#progressbar #account:before {
+    font-family: FontAwesome;
+    content: "\f13e"
+}
+
+#progressbar #personal:before {
+    font-family: FontAwesome;
+    content: "\f007"
+}
+
+#progressbar #payment:before {
+    font-family: FontAwesome;
+    content: "\f030"
+}
+
+#progressbar #confirm:before {
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #673AB7
+}
+
+.progress {
+    height: 20px
+}
+
+.progress-bar {
+    background-color: #673AB7
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover
+}
+
+.question {
+    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 2%;
+    font-weight: bold;
+    font-family: sans-serif
+}
+
+.my-textarea {
+    display: none;
+}
+
+.test-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* align-items: stretch; */
+    justify-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.cardSpan {
+    display: flex;
+    font-family: monospace;
+    margin:  0 0.2em;
+    margin-top: 0.2em;
+    color:#673AB7;
+    background-color: lightgrey;
+    /* padding: 1%;  */
+    border-radius: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 10vw;
+    /* height: min-content; */
+    /* vertical-align: middle; */
+    align-items: center;
+    justify-content: center;
+    /* line-height: 20px; */
+}
+
+
+#example_wrapper {
+    font-family: tahoma;
+    font-size: 13px;
+    /* direction: rtl; */
+    position: relative;
+    clear: both;
+    *zoom: 0.9;
+    zoom: 0.9;
+}
+
+
+/* Styloing for the summary results table showing cimliance status etc */
+#summaryTable {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+    
+}
+#summaryTable td, #summaryTable th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+}
+
+
+.ComplianceStatus {
+   width: 10%
+}
+.Question {
+    width: 50%
+ }
+.ResultsTable td, .ResultsTable th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+}
+
+.center.ResultsTable, .center.summaryTable{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px ;
+    padding-top: 20px;
+ 
+  }
+
+.Compliant > .Count,.Compliant > .ComplianceStatus
+  {
+    background-color: green;
+    color:white;
+  }
+
+
+  .Not_Compliant > .Count
+  {
+    background-color: red;
+    color:white;
+  }
+
+  
+  .Partially_Compliant > .Count
+  {
+    background-color: orange;
+    color:white;
+  }
+
+  /* Accordion styles */
+
+
+  .my-accordion {
+    background-color: #eee;
+    color: #2F2E2E;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .my-accordion.active, .my-accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .my-accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .my-accordion.active:after {
+    content: "\2212";
+  }
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+  #df_compliant_wrapper, #df_partially_compliant_wrapper, #df_not_compliant_wrapper {
+    font-family: tahoma;
+    font-size: 13px;
+    /* direction: rtl; */
+    position: relative;
+    clear: both;
+    *zoom: 0.9;
+    zoom: 0.9;
+}
+
+
+   /* .ResultsTable>tbody>tr>:nth-child(5){
+    width:100px;
+   } */
+
+   .hidden {
+    display: none;
+  }
+
+.ActionPlanDisplay_false {
+      display: none;
+  }
+
+.optionsContainerDisplay_false.options-container {
+    display:none
+}
+
+.my-textarea.optionsContainerDisplay_false{
+    display:none
+    
+}
+
+
+.Partially.Compliant.ActionPlan  {
+
+    /* background-color: orange; */
+    color:orange;
+    
+}  
+
+.Not.Compliant.ActionPlan {
+
+    color:red;
+}
+
+
+
+  

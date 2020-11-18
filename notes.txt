@@ -1,0 +1,2 @@
+conversion done to json here https://csvjson.com/csv2json
+

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EAGR,MAAM,EAAE,SAAS;EACjB,UAAU,EAAE,gDAAgD;CAE/D",
+    "sources": [
+        "concCircle.scss"
+    ],
+    "names": [],
+    "file": "concCircle.css"
+}
